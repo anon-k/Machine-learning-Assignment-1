@@ -111,8 +111,8 @@ print(f"Hold-out R2 : {r2_score(y[va], pv):.6f}")
 # ---------- 7. Final fit on all training data, predict test ----------
 final = make_model(best_kind).fit(Phi[:, cols(best_deg)], y)
 test_pred = final.predict(Phi_test[:, cols(best_deg)])
-pd.DataFrame({"y": test_pred}).to_csv("predictions_phase2.csv", index=False)
-print(f"\nSaved predictions_phase2.csv with {len(test_pred)} rows")
+pd.DataFrame({"y": test_pred}).to_csv("IMT2024079_pred_var2.csv", index=False)
+print(f"\nSaved IMT2024079_pred_var2.csv with {len(test_pred)} rows")
 print(pd.Series(test_pred).describe())
 
 # ---------- 8. Plots: MSE (train/val) and R2 (val) vs degree ----------

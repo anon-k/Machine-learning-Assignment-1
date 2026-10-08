@@ -105,8 +105,8 @@ if best_kind == "lasso":
     print("Nonzero terms:", (reg.coef_ != 0).sum(), "of", len(reg.coef_))
 
 test_pred = final.predict(Phi_test[:, cols(best_deg)])
-pd.DataFrame({"y": test_pred}).to_csv("predictions_phase1.csv", index=False)
-print(f"\nSaved predictions_phase1.csv with {len(test_pred)} rows")
+pd.DataFrame({"y": test_pred}).to_csv("IMT2024079_pred_var1.csv", index=False)
+print(f"\nSaved IMT2024079_pred_var1.csv with {len(test_pred)} rows")
 print(pd.Series(test_pred).describe())
 
 # ---------- 7. Plots: MSE (train/val) and R2 vs degree ----------
